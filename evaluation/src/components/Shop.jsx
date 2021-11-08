@@ -27,12 +27,31 @@ function Shop() {
   const handleMove = (e) => {
     let index;
     for (let i = 0; i < order.length; i++) {
-      if (e == order[i]) {
+      if (e === order[i]) {
         index = i;
       }
     }
     // let v = order.splice(index, 1);
     setCurrent([...current, order.splice(index, 1)[0]]);
+  };
+
+  const handleDelete = (e) => {
+    let index;
+    for (let i = 0; i < order.length; i++) {
+      if (e === order[i]) {
+        index = i;
+      }
+    }
+    order.splice(index, 1);
+  };
+  const handleDeletea = (e) => {
+    let index;
+    for (let i = 0; i < current.length; i++) {
+      if (e === order[i]) {
+        index = i;
+      }
+    }
+    current.splice(index, 1);
   };
 
   return (
@@ -68,9 +87,16 @@ function Shop() {
                   <div className="out">
                     <h2>out of stock</h2>
                     <p>{e.list}</p>
+                    <button
+                  onClick={(e) => {
+                    handleDeletea(e);
+                  }}
+                >
+                  Delete
+                </button>
                   </div>
                 ) : (
-                  <div>
+                  <div className="d">
                     <p>{e.list}</p>
                     <span>out of Stock</span>
                     <input
@@ -78,6 +104,13 @@ function Shop() {
                       name="Checkbox"
                       onChange={handleChange}
                     />
+                    <button
+                  onClick={(e) => {
+                    handleDeletea(e);
+                  }}
+                >
+                  Delete
+                </button>
                   </div>
                 )}
               </div>
@@ -88,7 +121,7 @@ function Shop() {
             <h1>Order item</h1>
             <hr />
             {order.map((e) => (
-              <div>
+              <div className="d">
                 <p>{e.list}</p>
                 <button
                   onClick={(e) => {
@@ -96,6 +129,13 @@ function Shop() {
                   }}
                 >
                   Move
+                </button>
+                <button
+                  onClick={(e) => {
+                    handleDelete(e);
+                  }}
+                >
+                  Delete
                 </button>
               </div>
             ))}
