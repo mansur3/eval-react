@@ -1,0 +1,66 @@
+.input-section {
+    width: 500px;
+    margin: auto;
+    background-color: lightcoral;
+    border: 1px solid black;
+    height: 120px;
+    border-radius: 10px;
+  }
+  .input {
+    width: 400px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  .current,
+  .order {
+    width: 150px;
+    height: 30px;
+    padding: 4px;
+    margin-top: 20px;
+    background-color: gray;
+    color: white;
+    box-shadow: 0 2px 2px lightsalmon;
+    cursor: pointer;
+  }
+  .current:hover,
+  .order:hover {
+    background-color: lightgray;
+    color: blue;
+  }
+  
+  .button {
+    width: 200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .buttonStyle {
+    background-color: lightgray;
+    padding: 10px;
+    color: blue;
+    border: 0;
+  }
+  .buttonStyle:hover {
+    background-color: gray;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .out {
+    width: 100%;
+    background-color: gray;
+    color: white;
+  }
+  .out > h2 {
+    color: Red;
+  }
+  
+  .show-data {
+    width: 500px;
+    margin: auto;
+    background-color: lightsalmon;
+    border: 1px solid black;
+    /* display: grid;
+    grid-template-columns: 48% 48%; */
+  }
+  
